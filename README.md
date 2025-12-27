@@ -1,8 +1,8 @@
 ## Server Site Project Setup
 
-```bash
- create a folder for server
-```
+
+ 🌟 At first Create a folder for server
+
 
 1. Packeg Initialize
 
