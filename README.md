@@ -22,7 +22,7 @@
  npm install -g nodemon
 ```
 
-4. Create a file
+4. Create (.env) file in root directory
 
 ```bash
  .env
