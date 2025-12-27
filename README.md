@@ -1,26 +1,31 @@
 ## Server Site Project Setup
 
 ```bash
-0. create a folder for server
+ create a folder for server
 ```
 
-1. ```bash
+1.
+```bash
  npm init -y
 ```
 
-2. ```bash
+2.
+```bash
  npm install express dotenv mongodb
 ```
 
-3. ```bash
+3.
+```bash
  npm install -g nodemon
 ```
 
-4. ```bash
+4.
+```bash
  create index.js file
 ```
 
-5. ```bash
+5.
+```bash
    const express = require("express");
    const app = express();
    const PORT = 3000;
@@ -31,15 +36,18 @@
    console.log(`Server running on http://localhost:${PORT}`);
    });
    ```
-6. ```bash
+6.
+```bash
  nodemon index.js
 ```
 
 Create a file name
-7. ```bash
+7.
+```bash
  .env
 ```
-8. ```bash
+8.
+```bash
  MONGODB_URI=mongodb+srv://(dbname):(dbpassword)@cluster0.zl93zio.mongodb.net/?appName=Cluster0
 
 ```
