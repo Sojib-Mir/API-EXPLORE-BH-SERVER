@@ -4,31 +4,44 @@
  create a folder for server
 ```
 
-1.
+1. Packeg Initialize
 
 ```bash
  npm init -y
 ```
 
-2.
+2. Install express & dotenv & mongodb
 
 ```bash
  npm install express dotenv mongodb
 ```
 
-3.
+3. Install Global nodemon
 
 ```bash
  npm install -g nodemon
 ```
 
-4.
+4. Create a file
+
+```bash
+ .env
+```
+
+5. Copy & Paste in (.env) file
+
+```bash
+ MONGODB_URI=mongodb+srv://(dbname):(dbpassword)@cluster0.zl93zio.mongodb.net/?appName=Cluster0
+
+```
+
+6. Create index.js file in root directory
 
 ```bash
  create index.js file
 ```
 
-5.
+7. Project set up code=> copy & paste in index.js file
 
 ```bash
 require("dotenv").config();
@@ -83,21 +96,10 @@ app.listen(port, () => {
 
 ```
 
-6.
+8. Server running command
 
 ```bash
  nodemon index.js
 ```
 
-Create a file name 7.
 
-```bash
- .env
-```
-
-8.
-
-```bash
- MONGODB_URI=mongodb+srv://(dbname):(dbpassword)@cluster0.zl93zio.mongodb.net/?appName=Cluster0
-
-```
