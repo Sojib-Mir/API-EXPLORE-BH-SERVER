@@ -25,14 +25,9 @@ async function run() {
     const db = client.db("simpleDB");
     const productsCollectons = db.collection("products");
 
-
-
-
     // const myCollection = db.collection("users");
 
     app.get("/products", (req, res) => {
-
-        
       res.send("Hello World!");
     });
 
@@ -40,8 +35,7 @@ async function run() {
     await client.db("admin").command({ ping: 1 });
     console.log("You successfully connected to MongoDB!");
   } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
+    //
   }
 }
 run().catch(console.dir);
@@ -49,18 +43,6 @@ run().catch(console.dir);
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-
-// app.get("/api", (req, res) => {
-//   res.send("api route");
-// });
-
-// app.get("/profile", (req, res) => {
-//   res.send("profile route");
-// });
-
-// app.get("/my-api", (req, res) => {
-//   res.send("my api route");
-// });
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
