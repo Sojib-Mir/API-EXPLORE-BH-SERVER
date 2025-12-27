@@ -4,20 +4,20 @@
 0. create a folder for server
 ```
 
-```bash
-1. npm init -y
+1. ```bash
+ npm init -y
 ```
 
-```bash
-2. npm install express dotenv mongodb
+2. ```bash
+ npm install express dotenv mongodb
 ```
 
-```bash
-3. npm install -g nodemon
+3. ```bash
+ npm install -g nodemon
 ```
 
-```bash
-4. create index.js file
+4. ```bash
+ create index.js file
 ```
 
 5. ```bash
@@ -31,18 +31,15 @@
    console.log(`Server running on http://localhost:${PORT}`);
    });
    ```
-
-```bash
-6. nodemon index.js
+6. ```bash
+ nodemon index.js
 ```
 
 Create a file name
-
-```bash
-7. .env
+7. ```bash
+ .env
 ```
-
-```bash
-8. MONGODB_URI=mongodb+srv://(dbname):(dbpassword)@cluster0.zl93zio.mongodb.net/?appName=Cluster0
+8. ```bash
+ MONGODB_URI=mongodb+srv://(dbname):(dbpassword)@cluster0.zl93zio.mongodb.net/?appName=Cluster0
 
 ```
