@@ -68,8 +68,8 @@ async function run() {
 
     // start api create \\
 
-    const db = client.db("dbname");
-    const productsCollectons = db.collection("collection");
+    const db = client.db("dbName");
+    const productsCollectons = db.collection("collectionName");
 
     // Ex:=>  const myCollection = db.collection("users");
 
