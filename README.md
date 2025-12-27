@@ -35,3 +35,14 @@
 ```bash
 6. nodemon index.js
 ```
+
+Create a file name
+
+```bash
+7. .env
+```
+
+```bash
+8. MONGODB_URI=mongodb+srv://(dbname):(dbpassword)@cluster0.zl93zio.mongodb.net/?appName=Cluster0
+
+```
