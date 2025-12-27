@@ -68,10 +68,10 @@ async function run() {
 
     // start api create \\
 
-    const db = client.db("simpleDB");
-    const productsCollectons = db.collection("products");
+    const db = client.db("dbname");
+    const productsCollectons = db.collection("collection");
 
-    // const myCollection = db.collection("users");
+    // Ex:=>  const myCollection = db.collection("users");
 
     app.get("/products", (req, res) => {
       res.send("Hello World!");
