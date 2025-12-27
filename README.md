@@ -1,0 +1,29 @@
+## Server Site Project Setup
+
+0. create a folder for server
+
+```bash
+1. npm init -y
+```bash
+2. npm install express dotenv mongodb
+```bash
+3. npm install -g nodemon
+
+
+4. create index.js file
+```bash
+5. const express = require("express");
+   const app = express();
+
+const PORT = 3000;
+
+app.get("/", (req, res) => {
+res.send("Hello Express Server 🚀");
+});
+
+app.listen(PORT, () => {
+console.log(`Server running on http://localhost:${PORT}`);
+});
+
+```bash
+6. nodemon index.js
