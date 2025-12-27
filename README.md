@@ -5,48 +5,98 @@
 ```
 
 1.
+
 ```bash
  npm init -y
 ```
 
 2.
+
 ```bash
  npm install express dotenv mongodb
 ```
 
 3.
+
 ```bash
  npm install -g nodemon
 ```
 
 4.
+
 ```bash
  create index.js file
 ```
 
 5.
+
 ```bash
-   const express = require("express");
-   const app = express();
-   const PORT = 3000;
-   app.get("/", (req, res) => {
-   res.send("Hello Express Server 🚀");
-   });
-   app.listen(PORT, () => {
-   console.log(`Server running on http://localhost:${PORT}`);
-   });
-   ```
+require("dotenv").config();
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 5000;
+const { MongoClient, ServerApiVersion } = require("mongodb");
+const uri = process.env.MONGODB_URI;
+
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  },
+});
+
+// app.use(cors());
+// app.use(express.json());
+
+async function run() {
+  try {
+    await client.connect();
+
+    // start api create \\
+
+    const db = client.db("simpleDB");
+    const productsCollectons = db.collection("products");
+
+    // const myCollection = db.collection("users");
+
+    app.get("/products", (req, res) => {
+      res.send("Hello World!");
+    });
+
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("You successfully connected to MongoDB!");
+  } finally {
+    //
+  }
+}
+run().catch(console.dir);
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+
+```
+
 6.
+
 ```bash
  nodemon index.js
 ```
 
-Create a file name
-7.
+Create a file name 7.
+
 ```bash
  .env
 ```
+
 8.
+
 ```bash
  MONGODB_URI=mongodb+srv://(dbname):(dbpassword)@cluster0.zl93zio.mongodb.net/?appName=Cluster0
 
