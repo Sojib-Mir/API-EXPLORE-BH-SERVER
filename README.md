@@ -13,7 +13,7 @@
 2. Install express & dotenv & mongodb
 
 ```bash
- npm install express dotenv mongodb
+ npm install express dotenv mongodb cors
 ```
 
 3. Install Global nodemon
