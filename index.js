@@ -16,7 +16,7 @@ const client = new MongoClient(uri, {
 
 app.use(cors());
 
-// app.use(express.json());
+app.use(express.json());
 
 async function run() {
   try {
@@ -31,12 +31,24 @@ async function run() {
       res.send(result);
     });
 
-    // app.post("/products", async (req, res) => {
-    //   const productData = req.body;
+    // single data product get api
+    app.get("/products/:id", async (req, res) => {
+      const id = req.params.id;
+      console.log(id);
 
-    //   const result = await productsCollection.insertOne(productData);
-    //   res.send(result);
-    // });
+      const query = { _id: new ObjectId(id) };
+
+      const result = await productsCollection.findOne(query);
+      console.log(result);
+      res.send(result);
+    });
+
+    // create product api
+    app.post("/products", async (req, res) => {
+      const productData = req.body;
+      const result = await productsCollection.insertOne(productData);
+      res.send(result);
+    });
 
     // app.delete("/products", async (req, res) => {
     //   const id = req.params.id;
