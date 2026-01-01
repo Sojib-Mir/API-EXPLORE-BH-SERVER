@@ -107,6 +107,7 @@ async function run() {
           price: updateData.price,
           category: updateData.category,
           image: updateData.image,
+          description: updateData.description,
         },
       };
 
